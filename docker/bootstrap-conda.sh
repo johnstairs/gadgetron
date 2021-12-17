@@ -15,6 +15,22 @@ cd "${WORKDIR}" && \
     cd range-v3 && \
     cp -r include "$PACKAGE_PATH"/
 
+# THRUST
+THRUST_VERSION="1.15.0"
+cd "${WORKDIR}" && \
+    rm -rf thurst && \
+    git clone -b "$THRUST_VERSION" https://github.com/NVIDIA/thrust.git && \
+    cd thrust && \
+    cp -r thrust "$PACKAGE_PATH"/
+
+# CUB
+CUB_VERSION="1.15.0"
+cd "${WORKDIR}" && \
+    rm -rf cub && \
+    git clone -b "$CUB_VERSION" https://github.com/NVIDIA/cub.git && \
+    cd cub && \
+    cp -r cub "$PACKAGE_PATH"/
+
 #ISMRMRD
 cd "${WORKDIR}" && \
     rm -rf ismrmrd && \
