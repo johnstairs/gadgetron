@@ -43,3 +43,16 @@ if (ARMADILLO_FOUND AND Boost_FOUND AND PLPLOT_FOUND)
 endif ()
 
 set(GADGETRON_BUILD_RPATH "${CMAKE_CURRENT_BINARY_DIR};${GADGETRON_BUILD_RPATH}" PARENT_SCOPE)
+
+add_library(gadgetron_toolbox SHARED empty.cpp)
+
+target_link_libraries(gadgetron_toolbox gadgetron_toolbox_cmr)
+
+
+install(TARGETS gadgetron_toolbox
+		EXPORT gadgetron-export
+		LIBRARY DESTINATION lib
+		ARCHIVE DESTINATION lib
+		RUNTIME DESTINATION bin
+		COMPONENT main
+)

@@ -18,7 +18,7 @@ link_libraries(
     gadgetron_toolbox_mri_core
     gadgetron_toolbox_cpuoperator
     gadgetron_toolbox_cpu_image
-    gadgetron_toolbox_cmr
+    gadgetron_toolbox
     gadgetron_toolbox_pr
     ${BOOST_LIBRARIES}
     ${GTEST_LIBRARIES}

@@ -91,7 +91,7 @@ target_link_libraries(gadgetron_cmr
     gadgetron_toolbox_mri_core
     gadgetron_toolbox_cpuoperator
     gadgetron_toolbox_image_analyze_io
-    gadgetron_toolbox_cmr
+    gadgetron_toolbox
 )
 
 install(FILES ${gadgetron_cmr_header_files} DESTINATION ${GADGETRON_INSTALL_INCLUDE_PATH} COMPONENT main)
