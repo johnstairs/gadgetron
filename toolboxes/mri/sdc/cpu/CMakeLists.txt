@@ -3,7 +3,7 @@ if (WIN32)
   add_definitions(-D_USE_MATH_DEFINES)
 endif ()
 
-add_library(gadgetron_toolbox_cpusdc SHARED
+add_library(gadgetron_toolbox_cpusdc OBJECT
   hoSDC.cpp
 )
 
@@ -16,12 +16,8 @@ target_include_directories(gadgetron_toolbox_cpusdc
 )
         
 target_link_libraries(gadgetron_toolbox_cpusdc
-  gadgetron_toolbox_cpucore
-  gadgetron_toolbox_hostutils
-  gadgetron_toolbox_log
   gadgetron_toolbox_operator
   gadgetron_toolbox_nfft
-  gadgetron_toolbox_cpunfft
 )
 
 install(TARGETS gadgetron_toolbox_cpusdc

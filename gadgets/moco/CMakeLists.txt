@@ -4,7 +4,7 @@ endif ()
 
 if (CUDA_FOUND)
     list(APPEND CPU_GADGETS cpuRegistrationAveragingGadget.cpp)
-    list(APPEND CPU_LIBS gadgetron_toolbox_cpucore_math gadgetron_toolbox_cpureg)
+    list(APPEND CPU_LIBS gadgetron_toolbox gadgetron_toolbox_cpureg)
 
 
     list(APPEND GPU_GADGETS gpuRegistrationAveragingGadget.cpp gpuRegistrationScatteringGadget.cpp)

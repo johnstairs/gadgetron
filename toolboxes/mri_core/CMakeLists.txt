@@ -27,7 +27,7 @@ set(mri_core_source_files
         mri_core_girf_correction.cpp
         mri_core_partial_fourier.cpp)
 
-add_library(gadgetron_toolbox_mri_core SHARED
+add_library(gadgetron_toolbox_mri_core OBJECT
         ${mri_core_header_files} ${mri_core_source_files})
 
 set_target_properties(gadgetron_toolbox_mri_core PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
@@ -35,15 +35,10 @@ set_target_properties(gadgetron_toolbox_mri_core PROPERTIES LINKER_LANGUAGE CXX)
 
 target_link_libraries(gadgetron_toolbox_mri_core
         gadgetron_core
-        gadgetron_toolbox_cpucore
-        gadgetron_toolbox_cpucore_math
         ISMRMRD::ISMRMRD
         armadillo
         Boost::filesystem
-        gadgetron_toolbox_cpufft
-        gadgetron_toolbox_cpuklt
-        gadgetron_toolbox_image_analyze_io
-        gadgetron_toolbox_cpuklt)
+)
 target_include_directories(
         gadgetron_toolbox_mri_core
         PUBLIC
@@ -75,11 +70,6 @@ if (Boost_PYTHON3_FOUND AND PYTHONLIBS_FOUND AND NUMPY_FOUND)
             mri_core_python.cpp)
 
     target_link_libraries(gadgetron_toolbox_mri_core_python
-            gadgetron_toolbox_cpucore
-            gadgetron_toolbox_cpucore_math
-            gadgetron_toolbox_cpufft
-            gadgetron_toolbox_cpuklt
-            gadgetron_toolbox_image_analyze_io
             gadgetron_toolbox_python
             gadgetron_toolbox_mri_core
             )

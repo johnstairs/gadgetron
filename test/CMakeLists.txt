@@ -68,7 +68,7 @@ include(GoogleTest)
     gadgetron_core_readers
 		gadgetron_core_writers        gadgetron_mricore
             gadgetron_toolbox_cpucore
-            gadgetron_toolbox_cpucore_math
+            gadgetron_toolbox
             gadgetron_toolbox_cpufft
             gadgetron_toolbox_cpunfft
             gadgetron_toolbox_cpudwt

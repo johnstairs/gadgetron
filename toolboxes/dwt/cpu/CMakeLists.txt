@@ -4,7 +4,7 @@ endif ()
 
 
 
-add_library(gadgetron_toolbox_cpudwt SHARED 
+add_library(gadgetron_toolbox_cpudwt OBJECT 
     hoNDWavelet.h
     hoNDWavelet.cpp
     hoNDHarrWavelet.h
@@ -19,12 +19,6 @@ target_include_directories(gadgetron_toolbox_cpudwt
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
 
 set_target_properties(gadgetron_toolbox_cpudwt PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
-
-target_link_libraries(gadgetron_toolbox_cpudwt
-                    gadgetron_toolbox_cpucore
-                    gadgetron_toolbox_log
-                    gadgetron_toolbox_cpucore_math
-                    )
 
 install(TARGETS gadgetron_toolbox_cpudwt
         EXPORT gadgetron-export

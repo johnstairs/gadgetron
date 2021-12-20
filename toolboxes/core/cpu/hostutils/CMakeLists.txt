@@ -12,12 +12,11 @@ set(hostutils_header_files
         parameterparser.h
         url_encode.h)
 
-add_library(gadgetron_toolbox_hostutils SHARED
+add_library(gadgetron_toolbox_hostutils OBJECT
         ${hostutils_header_files}
         ${hostutils_scr_files})
 
 target_link_libraries(gadgetron_toolbox_hostutils
-        gadgetron_toolbox_log
         Boost::system
 		gadgetron_core
         )

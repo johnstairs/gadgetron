@@ -38,8 +38,6 @@ cuda_add_library(gadgetron_toolbox_gpucore SHARED
 set_target_properties(gadgetron_toolbox_gpucore PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
 
 target_link_libraries(gadgetron_toolbox_gpucore 
-  gadgetron_toolbox_cpucore
-  gadgetron_toolbox_log
   ${CUDA_LIBRARIES}
   ${CUDA_CUFFT_LIBRARIES} 
   ${CUDA_CUBLAS_LIBRARIES} 

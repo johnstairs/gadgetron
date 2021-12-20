@@ -23,7 +23,6 @@ message("Boost_LIBRARIES is ${Boost_LIBRARIES}")
 target_link_libraries(gadgetron_toolbox_python
         gadgetron_core
         gadgetron_toolbox_mri_core
-        gadgetron_toolbox_cpucore
         Boost::system
         python
         gadgetron_toolbox_log)

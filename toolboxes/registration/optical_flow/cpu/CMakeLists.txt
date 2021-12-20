@@ -53,7 +53,7 @@
 
     if (BUILD_CPU_OPTIMAL_FLOW_REG)
 
-        add_library(gadgetron_toolbox_cpureg SHARED
+        add_library(gadgetron_toolbox_cpureg OBJECT
                 cpureg_export.h
                 ${opticalflow_files}
                 ${transformation_files}
@@ -69,11 +69,8 @@
         target_link_libraries(gadgetron_toolbox_cpureg
                 gadgetron_toolbox_operator
                 gadgetron_toolbox_mri_image
-                gadgetron_toolbox_cpucore
                 gadgetron_toolbox_cpu_solver
                 gadgetron_toolbox_log
-                gadgetron_toolbox_cpucore_math
-                gadgetron_toolbox_image_analyze_io
                 armadillo
                 )
         target_include_directories(gadgetron_toolbox_cpureg

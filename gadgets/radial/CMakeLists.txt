@@ -24,7 +24,7 @@ target_link_libraries(gadgetron_gpuradial
         gadgetron_toolbox_gpusolvers
         gadgetron_toolbox_gpuoperators
         gadgetron_toolbox_cpucore
-        gadgetron_toolbox_cpucore_math
+        gadgetron_toolbox
         gadgetron_toolbox_gpucore)
 
 install (FILES  gadgetron_radial_export.h

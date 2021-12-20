@@ -17,18 +17,16 @@ set(plplot_files PLplotExport.h
 
 source_group(plplot FILES ${header_files} ${src_files})
 
-add_library(gadgetron_toolbox_plplot SHARED 
+add_library(gadgetron_toolbox_plplot OBJECT 
             ${plplot_files} )
 
 set_target_properties(gadgetron_toolbox_plplot PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
 
 target_link_libraries(gadgetron_toolbox_plplot 
                       ${PLPLOT_LIBRARIES}
-                      gadgetron_toolbox_cpucore
                       gadgetron_toolbox_log
-                      gadgetron_toolbox_cpucore_math 
                       gadgetron_toolbox_mri_core
-                      gadgetron_toolbox_cpucore_math )
+)
 
 target_include_directories(gadgetron_toolbox_plplot
         PUBLIC

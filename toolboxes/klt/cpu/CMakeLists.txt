@@ -1,21 +1,13 @@
 if (WIN32)
   add_definitions(-D__BUILD_GADGETRON_CPUKLT__)
 endif ()
-add_library(gadgetron_toolbox_cpuklt SHARED 
+add_library(gadgetron_toolbox_cpuklt OBJECT 
   cpuklt_export.h 
   hoNDKLT.h
   hoNDKLT.cpp
   )
 
 set_target_properties(gadgetron_toolbox_cpuklt PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
-
-target_link_libraries(gadgetron_toolbox_cpuklt
-                    gadgetron_toolbox_cpucore
-                    gadgetron_toolbox_log
-                    gadgetron_toolbox_cpucore_math
-                    )
-
-
 
 target_include_directories(
         gadgetron_toolbox_cpuklt

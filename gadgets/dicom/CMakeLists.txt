@@ -83,7 +83,7 @@ target_link_libraries(gadgetron_dicom
     ${GT_DICOM_LIBRARIES} )
 
 if(ARMADILLO_FOUND)
-    target_link_libraries(gadgetron_dicom gadgetron_toolbox_cpucore_math )
+    target_link_libraries(gadgetron_dicom gadgetron_toolbox )
 endif()
 
 install(

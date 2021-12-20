@@ -21,7 +21,6 @@ target_include_directories(gadgetron_toolbox_gpudwt
 set_target_properties(gadgetron_toolbox_gpudwt PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
 
 target_link_libraries(gadgetron_toolbox_gpudwt 
-  gadgetron_toolbox_cpucore
   gadgetron_toolbox_gpucore 
   ${CUDA_LIBRARIES}
   ${CUDA_CUFFT_LIBRARIES} 

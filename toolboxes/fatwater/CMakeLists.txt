@@ -2,7 +2,7 @@ if (WIN32)
   add_definitions(-D__BUILD_GADGETRON_FATWATER__)
 endif ()
 
-add_library(gadgetron_toolbox_fatwater SHARED
+add_library(gadgetron_toolbox_fatwater OBJECT
   fatwater_export.h 
   fatwater.h
   fatwater.cpp
@@ -11,10 +11,6 @@ add_library(gadgetron_toolbox_fatwater SHARED
 set_target_properties(gadgetron_toolbox_fatwater PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
 
 target_link_libraries(gadgetron_toolbox_fatwater
-  gadgetron_toolbox_log
-  gadgetron_toolbox_cpucore 
-  gadgetron_toolbox_cpucore_math
-  gadgetron_toolbox_cpufft
   armadillo
   )
 

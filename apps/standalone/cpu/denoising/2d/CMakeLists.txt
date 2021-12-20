@@ -6,9 +6,8 @@ endif ()
 
 add_executable(cpu_denoise_TV denoise_TV.cpp)
 target_link_libraries(cpu_denoise_TV 
-                    gadgetron_toolbox_cpucore 
-                    gadgetron_toolbox_cpucore_math 
-                    gadgetron_toolbox_hostutils
+                    gadgetron_toolbox_cpucore  
+                    gadgetron_toolbox
                     GTBLAS
                     Boost::system
                     )

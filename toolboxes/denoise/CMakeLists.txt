@@ -1,7 +1,7 @@
 
 
 
-add_library(gadgetron_toolbox_denoise SHARED 
+add_library(gadgetron_toolbox_denoise OBJECT 
         denoise_export.h
         non_local_means.cpp
         non_local_means.h
@@ -10,9 +10,6 @@ add_library(gadgetron_toolbox_denoise SHARED
 set_target_properties(gadgetron_toolbox_denoise PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
 
 target_link_libraries(gadgetron_toolbox_denoise
-        gadgetron_toolbox_log
-        gadgetron_toolbox_cpucore
-        gadgetron_toolbox_cpucore_math
         armadillo
         )
 target_include_directories(gadgetron_toolbox_denoise

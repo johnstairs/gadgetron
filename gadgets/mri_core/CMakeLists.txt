@@ -221,7 +221,7 @@ target_link_libraries(gadgetron_mricore
         gadgetron_toolbox_cpufft
         gadgetron_toolbox_image_analyze_io
         gadgetron_toolbox_denoise
-        gadgetron_toolbox_hostutils
+        gadgetron_toolbox
         gadgetron_toolbox_cpuoperator
         gadgetron_toolbox_cpuklt
         gadgetron_toolbox_mri_core

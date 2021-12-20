@@ -46,13 +46,51 @@ set(GADGETRON_BUILD_RPATH "${CMAKE_CURRENT_BINARY_DIR};${GADGETRON_BUILD_RPATH}"
 
 add_library(gadgetron_toolbox SHARED empty.cpp)
 
-target_link_libraries(gadgetron_toolbox gadgetron_toolbox_cmr)
-
+target_link_libraries(gadgetron_toolbox 
+    gadgetron_toolbox_cmr
+    gadgetron_toolbox_cpu_image
+    gadgetron_toolbox_cpucore
+    gadgetron_toolbox_cpudwt
+    gadgetron_toolbox_cpufft
+    gadgetron_toolbox_cpuklt
+    gadgetron_toolbox_cpunfft
+    gadgetron_toolbox_cpureg
+    gadgetron_toolbox_cpusdc
+    gadgetron_toolbox_deblur
+    gadgetron_toolbox_denoise
+    gadgetron_toolbox_fatwater
+    gadgetron_toolbox_image_analyze_io
+    gadgetron_toolbox_log
+    gadgetron_toolbox_plplot
+    gadgetron_toolbox_pr
+    gadgetron_toolbox_python
+    gadgetron_toolbox_spiral
+    gadgetron_toolbox_t1
+)
 
 install(TARGETS gadgetron_toolbox
-		EXPORT gadgetron-export
-		LIBRARY DESTINATION lib
-		ARCHIVE DESTINATION lib
-		RUNTIME DESTINATION bin
-		COMPONENT main
+    EXPORT gadgetron-export
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+    COMPONENT main
 )
+
+set_target_properties(gadgetron_toolbox PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
+
+
+if (CUDA_FOUND)
+    cuda_add_library(gadgetron_toolbox_gpu SHARED empty.cpp)
+    
+    set_target_properties(gadgetron_toolbox_gpu PROPERTIES VERSION ${GADGETRON_VERSION_STRING} SOVERSION ${GADGETRON_SOVERSION})
+
+
+    install(TARGETS gadgetron_toolbox_gpu
+            EXPORT gadgetron-export
+            LIBRARY DESTINATION lib
+            ARCHIVE DESTINATION lib
+            RUNTIME DESTINATION bin
+            COMPONENT main
+    )
+endif ()
+

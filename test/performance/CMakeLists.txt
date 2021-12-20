@@ -6,7 +6,6 @@ include_directories(${EIGEN_INCLUDE_DIR})
 
 link_libraries(
     gadgetron_toolbox_cpucore
-    gadgetron_toolbox_cpucore_math
     gadgetron_toolbox_cpufft
     gadgetron_toolbox_cpunfft
     gadgetron_toolbox_cpudwt

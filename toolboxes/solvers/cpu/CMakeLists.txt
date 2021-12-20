@@ -15,8 +15,7 @@ add_library(gadgetron_toolbox_cpu_solver INTERFACE)
 target_link_libraries(gadgetron_toolbox_cpu_solver INTERFACE
                     gadgetron_toolbox_operator
                     gadgetron_toolbox_solvers
-                    gadgetron_toolbox_cpucore
-                    gadgetron_toolbox_cpucore_math )
+)
 target_include_directories(gadgetron_toolbox_cpu_solver
         INTERFACE
         $<INSTALL_INTERFACE:include/gadgetron>

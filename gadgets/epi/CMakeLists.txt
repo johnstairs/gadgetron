@@ -22,7 +22,7 @@ target_link_libraries(
   gadgetron_mricore
   gadgetron_toolbox_cpucore
   gadgetron_toolbox_cpufft
-  gadgetron_toolbox_cpucore_math
+  gadgetron_toolbox
   gadgetron_toolbox_log
   gadgetron_toolbox_epi
 )

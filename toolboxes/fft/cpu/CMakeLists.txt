@@ -3,7 +3,7 @@ if (WIN32)
 endif ()
 
 
-add_library(gadgetron_toolbox_cpufft SHARED
+add_library(gadgetron_toolbox_cpufft OBJECT
         cpufft_export.h
         hoNDFFT.h
         hoNDFFT.cpp
@@ -19,9 +19,6 @@ target_include_directories(
 )
 
 target_link_libraries(gadgetron_toolbox_cpufft
-        gadgetron_toolbox_cpucore
-        gadgetron_toolbox_log
-        gadgetron_toolbox_cpucore_math
         FFTW
         armadillo
         )

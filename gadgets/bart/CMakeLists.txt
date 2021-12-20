@@ -49,7 +49,7 @@ target_link_libraries(gadgetron_bart gadgetron_core
   gadgetron_toolbox_cpuklt  
   )
 
-  target_link_libraries(gadgetron_bart gadgetron_toolbox_cpucore_math)
+  target_link_libraries(gadgetron_bart gadgetron_toolbox)
 
 install(FILES  bartgadget.h
   DESTINATION ${GADGETRON_INSTALL_INCLUDE_PATH} COMPONENT main)

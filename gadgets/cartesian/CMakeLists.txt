@@ -15,7 +15,7 @@ target_link_libraries(gadgetron_cartesian gadgetron_toolbox_cpucore
   gadgetron_core
   gadgetron_toolbox_log
   gadgetron_mricore
-  gadgetron_toolbox_cpucore_math 
+  gadgetron_toolbox 
   )
 
 

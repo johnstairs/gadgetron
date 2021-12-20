@@ -12,8 +12,7 @@ add_executable(nfft nfft.cpp)
 
 target_link_libraries(nfft
 	gadgetron_toolbox_cpucore
-	gadgetron_toolbox_cpucore_math
-	gadgetron_toolbox_hostutils
+	gadgetron_toolbox
 	gadgetron_toolbox_cpunfft
 )
 

@@ -8,7 +8,7 @@ include_directories(
 )
 
 target_link_libraries(register_HS_2d_gpu 
-  gadgetron_toolbox_hostutils 
+  gadgetron_toolbox 
   gadgetron_toolbox_gpureg 
   gadgetron_toolbox_gpucore 
   gadgetron_toolbox_gpuoperators
@@ -17,7 +17,7 @@ target_link_libraries(register_HS_2d_gpu
   )
 
 target_link_libraries(register_CK_2d_gpu
-  gadgetron_toolbox_hostutils 
+  gadgetron_toolbox 
   gadgetron_toolbox_gpureg 
   gadgetron_toolbox_gpucore 
   gadgetron_toolbox_gpuoperators
@@ -37,7 +37,7 @@ target_link_libraries(register_CK_2d_gpu
 #  )
   
   target_link_libraries(register_CGHS_2d_gpu 
-  gadgetron_toolbox_hostutils 
+  gadgetron_toolbox 
   gadgetron_toolbox_gpureg 
   gadgetron_toolbox_gpucore 
   gadgetron_toolbox_gpuoperators

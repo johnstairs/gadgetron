@@ -20,7 +20,6 @@ target_include_directories(gadgetron_toolbox_gpufft
 
 
 target_link_libraries(gadgetron_toolbox_gpufft
-        gadgetron_toolbox_cpucore
         gadgetron_toolbox_log
         gadgetron_toolbox_gpucore
         ${CUDA_LIBRARIES}

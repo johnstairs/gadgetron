@@ -46,7 +46,7 @@ set(algorithm_files algorithm/hoNDBSpline.h algorithm/hoNDBSpline.hxx )
 source_group(algorithm FILES ${algorithm_files})
 source_group(image FILES ${image_files})
 
-add_library(gadgetron_toolbox_cpucore SHARED
+add_library(gadgetron_toolbox_cpucore OBJECT
                     hoMatrix.cpp 
                     ${header_files} 
                     ${image_files}  
@@ -72,7 +72,6 @@ set_target_properties(gadgetron_toolbox_cpucore  PROPERTIES VERSION ${GADGETRON_
 
 target_link_libraries(
   gadgetron_toolbox_cpucore
-  gadgetron_toolbox_log
   ISMRMRD::ISMRMRD
 	Boost::boost
     Boost::system

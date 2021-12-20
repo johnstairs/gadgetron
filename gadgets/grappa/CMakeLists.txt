@@ -31,7 +31,7 @@ target_link_libraries(gadgetron_grappa
         gadgetron_core_parallel
         gadgetron_mricore
         gadgetron_toolbox_cpucore
-        gadgetron_toolbox_cpucore_math
+        gadgetron_toolbox
         gadgetron_toolbox_cpufft)
 
 if (CUDA_FOUND)
